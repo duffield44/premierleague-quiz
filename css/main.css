@@ -50,7 +50,8 @@ p {
 }
 
 .logo {
-	width: 50% ;
+	margin-left: 6rem;
+	width: 40% ;
 }
 
 .score {
@@ -59,7 +60,9 @@ p {
 }
 
 .score h1 {
+	font-family: "Open Sans", "Comfortaa", sans-serif;
 	font-weight: 700;
+	color: #00235D;
 }
 
 .score p {
@@ -77,17 +80,18 @@ p {
 .middle {
 	text-align: center;
 	margin-top: 2rem;
+	overflow: hidden;
 }
 
 .content h2 {
+	font-family: "Open Sans", "Comfortaa", sans-serif;
 	font-weight: 700;
+	color: #00235D;
 }
 
 .question {
 	margin-top: 1rem;
 }
-
-
 
 .answers {
 	max-width: 40em;
@@ -99,10 +103,68 @@ p {
 	float: left;
 	width: 20%;
 	margin-right: 2em;
-	padding: 0.2rem;
+}
+
+.list .selected {
+	padding: 0.4rem;
+	border: 0.7rem solid #F10F3F;
+	border-radius: 40px;
+}
+
+.list .unselected {
+	padding: 0.4rem;
 	border: 0.7rem solid #00235D;
 	border-radius: 40px;
 }
+
+.list .selected {
+	cursor: pointer;
+}
+
+.list .unselected:hover {
+	border-color: #0000FF;
+	cursor: pointer;
+ }
+
+.list .answer-text {
+	font-size: 1em;
+	margin-top: 0.5rem;
+}
+
+
+/*---------------------------
+	User Answer Section
+---------------------------*/
+
+.user-answer {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.user-answer p,
+.user-answer button {
+	display: inline-block;
+}
+
+.user-answer #answer {
+	margin-left: 0.5rem;
+}
+
+.user-answer button {
+	margin-left: 6rem;
+	padding: 0.7rem;
+	border-radius: 5px;
+	font-family: "Open Sans", "Comfortaa", sans-serif;
+	font-weight: 700;
+	font-size: 2em;
+	color: #00235D;
+}
+
+.user-answer button:hover {
+	background-color: Gray;
+	cursor: pointer;
+}
+
 
 
 

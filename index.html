@@ -9,8 +9,10 @@
 	<script src="js/questions.js"></script>
 	<script src="js/app.js"></script>	
 	<title>Premier League Quiz</title>
-	<div class="main">
-		<div class="heading">
+</head>
+<body>
+	<section class="main">
+		<section class="heading">
 			<div class="logo">
 			<img src="images/premier-league.png" alt="Premier League Logo" class="premier-league">		
 			</div>
@@ -19,8 +21,8 @@
 				<p>Correct vs Incorrect</p>
 				<h2>2	:	0</h2>
 			</div>
-		</div>
-		<div class="middle">
+		</section>
+		<section class="middle">
 			<div class="content">
 				<h2>Question 1 of 5</h2>
 				<p class="question">In the 2004/05 season, which team won the Premier League?</p>
@@ -28,23 +30,35 @@
 			<div class="answers">
 				<ul class="list">
 					<li>
-						<img src="images/arsenal.png" alt="">
+						<p class="selected">
+							<img src="images/arsenal.png" alt="">
+						</p>
+						<p class="answer-text">Arsenal</p>
 					</li><!---
 				 --><li>
-						<img src="images/arsenal.png" alt="">
+						<p class="unselected">
+							<img src="images/man-u.png" alt="">
+						</p>
+						<p class="answer-text">Manchester United</p>
 					</li><!---
 				 --><li>
-						<img src="images/arsenal.png" alt="">
+						<p class="unselected">
+							<img src="images/swansea.png" alt="">
+						</p>
+						<p class="answer-text">Swansea City</p>
 					</li><!---
 				 --><li>
-						<img src="images/arsenal.png" alt="">
+						<p class="unselected">
+							<img src="images/chelsea.png" alt="">
+						</p>
+						<p class="answer-text">Chelsea</p>
 					</li>
 				</ul>
 			</div>
-		</div>
-	</div>
-</head>
-<body>
-	
+		</section>
+		<section class="user-answer">
+			<p>Your Answer: </p><p id="answer">Arsenal</p><button>Submit</button>
+		</section>
+	</section>
 </body>
 </html>
