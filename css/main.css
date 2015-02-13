@@ -1,0 +1,113 @@
+/*---------------------------
+		General
+---------------------------*/
+
+body {
+	font-size: 1em;
+	font-family: "Comfortaa", "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+/*---------------------------
+		Main Section
+---------------------------*/
+
+.main {
+	max-width: 60em;
+	margin: 0 auto;
+}
+
+
+/*---------------------------
+		Heading Section
+---------------------------*/
+
+.heading {
+	text-align: center;
+	overflow: hidden;
+}
+
+.heading .logo,
+.heading .score {
+	display: inline-block;
+	float: left;
+}
+
+.logo {
+	width: 50% ;
+}
+
+.score {
+	width: 50%;
+	margin-top: 4rem;
+}
+
+.score h1 {
+	font-weight: 700;
+}
+
+.score p {
+	margin-top: 1rem;
+}
+
+.score h2 {
+	margin-top: 0.5rem;
+}
+
+/*---------------------------
+		Middle Section
+---------------------------*/
+
+.middle {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.content h2 {
+	font-weight: 700;
+}
+
+.question {
+	margin-top: 1rem;
+}
+
+
+
+.answers {
+	max-width: 40em;
+	margin: 1rem auto 0 auto;
+}
+
+.list li {
+	display: inline-block;
+	float: left;
+	width: 20%;
+	margin-right: 2em;
+	padding: 0.2rem;
+	border: 0.7rem solid #00235D;
+	border-radius: 40px;
+}
+
+
+
+
+
+
+
+
