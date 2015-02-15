@@ -46,6 +46,7 @@ p {
 	font-weight: 700;
 	font-size: 2em;
 	color: #00235D;
+	background: #EDEDED;
 }
 
 .user-answer button:hover,
@@ -55,13 +56,8 @@ p {
 }
 
 /*---------------------------
-		Main Section
+	Play Area Section
 ---------------------------*/
-
-.main {
-	max-width: 60em;
-	margin: 0 auto;
-}
 
 /*---------------------------
 		Heading Section
@@ -75,17 +71,23 @@ p {
 .heading .logo,
 .heading .score {
 	display: inline-block;
-	float: left;
+	
 }
 
 .logo {
-	margin-left: 6rem;
-	width: 40% ;
+	float: left;
+	margin-left: 3rem;
+	width: 30% ;
 }
 
 .score {
-	width: 50%;
-	margin-top: 4rem;
+	float: right;
+	float: right;
+	width: 20%;
+	margin: 4rem 11rem 0 0;
+	padding: 0.3rem;
+	border-radius: 6px;
+	background: #EDEDED;
 }
 
 .score h1 {
@@ -103,12 +105,22 @@ p {
 }
 
 /*---------------------------
+		Main Section
+---------------------------*/
+
+.main {
+	max-width: 60em;
+	margin: 0 auto;
+	position: relative;
+	bottom: 1rem;
+}
+
+/*---------------------------
 		Middle Section
 ---------------------------*/
 
 .middle {
 	text-align: center;
-	margin-top: 2rem;
 	overflow: hidden;
 }
 
