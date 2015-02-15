@@ -135,7 +135,7 @@ p {
 }
 
 .answers {
-	max-width: 40em;
+	max-width: 42em;
 	margin: 2rem auto 0 auto;
 }
 
@@ -143,7 +143,11 @@ p {
 	display: inline-block;
 	float: left;
 	width: 20%;
-	margin-right: 2em;
+	margin-right: 1.5em;
+}
+
+.list #first-answer {
+	margin-left: 1.5em;
 }
 
 .list .selected {
@@ -198,6 +202,118 @@ p {
 /*---------------------------
 		Responsiveness
 ---------------------------*/
+
+@media only screen and (max-width: 1265px) {
+	.logo {
+		width: 35% ;
+	}
+	.score {
+		width: 25%;
+	}
+}
+
+@media only screen and (max-width: 1070px) {
+	.main {
+		bottom: 0;
+		margin: 2rem auto 1rem auto;
+	}
+}
+
+@media only screen and (max-width: 1020px) {
+	.logo {
+		width: 40%;
+	}
+	.score {
+		font-size: 0.8em;
+		margin-right: 7rem;
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	.logo {
+		width: 45%;
+	}
+	.score {
+		width: 30%;
+		margin-right: 4rem;
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.play-area {
+		padding: 0 1rem;
+	}
+	.heading {
+		text-align: center;
+	}
+	.logo {
+		width: 65%;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	.score {
+		margin: 1rem 0 0 0;
+		float: none;
+		width: 40%;
+	}
+	.list li {
+		width: 19%;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.score {
+		width: 50%;
+	}
+	.answers {
+		max-width: 20em;
+	}
+	.list li {
+		width: 38%;
+		margin-top: 0.5rem;
+	}
+	.list #answer1, 
+	.list #answer3 {
+		margin-left: 1.5em;
+	}
+	.content,
+	.user-answer {
+		font-size: 0.8em;
+	}
+	.user-answer button {
+		margin-left: 3rem;
+	}
+}
+
+@media only screen and (max-width: 415px) {
+	.logo {
+		width: 75%;
+	}
+	.score {
+		width: 60%;
+	}
+	.user-answer button {
+		display: block;
+		margin: 0.5rem auto 0 auto;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.logo {
+		width: 85%;
+	}
+	.score {
+		font-size: 0.6em;
+	}
+	.list li {
+		margin-right: 1.3em;
+	}	
+	.list #answer1, 
+	.list #answer3 {
+		margin-left: 1.3em;
+	}
+}
 
 
 
