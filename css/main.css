@@ -39,7 +39,8 @@ p {
 }
 
 .user-answer button,
-.intro-button button {
+.intro-button button,
+.next button {
 	padding: 0.7rem;
 	border-radius: 5px;
 	font-family: "Open Sans", "Comfortaa", sans-serif;
@@ -50,7 +51,8 @@ p {
 }
 
 .user-answer button:hover,
-.intro-button button:hover {
+.intro-button button:hover,
+.next button:hover {
 	background-color: Gray;
 	cursor: pointer;
 }
@@ -197,6 +199,49 @@ p {
 
 .user-answer button {
 	margin-left: 6rem;
+}
+
+/*---------------------------
+	Answer Area Section
+---------------------------*/
+
+.answer-area {
+	max-width: 60em;
+	margin: 0 auto;
+	display: none;
+}
+
+.answer-header {
+	margin-top: 2rem; 	
+	overflow: hidden;
+}
+
+.answer-pic {
+	float: left;
+}
+
+.correct {
+	float: left;
+	margin: 2rem 0 0 4rem;
+}
+
+.correct h1 {
+	font-family: "Open Sans", "Comfortaa", sans-serif;
+	font-weight: 700;
+	color: #00235D;
+}
+
+.correct p {
+	margin-top: 1rem;
+}
+
+.description {
+	margin-top: 2rem;
+}
+
+.next {
+	margin-top: 2rem;
+	text-align: center;
 }
 
 /*---------------------------
