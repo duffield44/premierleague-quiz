@@ -25,6 +25,36 @@ p {
 }
 
 /*---------------------------
+		Intro Section
+---------------------------*/
+
+.intro {
+	max-width: 60em;
+	margin: 0 auto;
+	display: none;
+}
+
+.banner, .intro-button {
+	text-align: center;
+}
+
+.user-answer button,
+.intro-button button {
+	padding: 0.7rem;
+	border-radius: 5px;
+	font-family: "Open Sans", "Comfortaa", sans-serif;
+	font-weight: 700;
+	font-size: 2em;
+	color: #00235D;
+}
+
+.user-answer button:hover,
+.intro-button button:hover {
+	background-color: Gray;
+	cursor: pointer;
+}
+
+/*---------------------------
 		Main Section
 ---------------------------*/
 
@@ -32,7 +62,6 @@ p {
 	max-width: 60em;
 	margin: 0 auto;
 }
-
 
 /*---------------------------
 		Heading Section
@@ -152,17 +181,6 @@ p {
 
 .user-answer button {
 	margin-left: 6rem;
-	padding: 0.7rem;
-	border-radius: 5px;
-	font-family: "Open Sans", "Comfortaa", sans-serif;
-	font-weight: 700;
-	font-size: 2em;
-	color: #00235D;
-}
-
-.user-answer button:hover {
-	background-color: Gray;
-	cursor: pointer;
 }
 
 
