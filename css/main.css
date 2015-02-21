@@ -31,7 +31,6 @@ p {
 .intro {
 	max-width: 60em;
 	margin: 0 auto;
-	display: none;
 }
 
 .banner, .intro-button {
@@ -60,6 +59,10 @@ p {
 /*---------------------------
 	Play Area Section
 ---------------------------*/
+
+.play-area {
+	display: none;
+}
 
 /*---------------------------
 		Heading Section
