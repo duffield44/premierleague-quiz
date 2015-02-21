@@ -7,10 +7,20 @@ $(document).ready(function(){
 		$('.play-area').delay(500).fadeIn(500);
 	})
 
-	/*---Add Selected class when user clicks answer---*/
+	/*---Functionality when user clicks answer---*/
 	$('.unselected').click(function() {
-	$('.selected').removeClass('selected').addClass('unselected');
-	$(this).removeClass('unselected').addClass('selected');
+		/*---Give user feedback of his selected answer---*/
+		var answerVal = $(this).siblings('p').text();
+		$('#answer').text(answerVal);
+		/*---Change appearance of selected answer---*/
+		$('.selected').removeClass('selected').addClass('unselected');
+		$(this).removeClass('unselected').addClass('selected');
+	})
+
+	/*---When user submits his answer---*/
+	$('.submit').on('click', function(){
+		$('.play-area').fadeOut(500);
+		$('.answer-area').delay(500).fadeIn(500);
 	})
 
 	/*---Questions---*/
