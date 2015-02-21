@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$('.play-area').delay(500).fadeIn(500);
 	})
 
-	/*---Functionality when user clicks answer---*/
+	/*---Functionality when user selects answer---*/
 	$('.unselected').click(function() {
 		/*---Give user feedback of his selected answer---*/
 		var answerVal = $(this).siblings('p').text();
@@ -24,6 +24,15 @@ $(document).ready(function(){
 		qManager.checkAnswer();
 	})
 
+	/*---CLick Next---*/
+	$('.next-question').on('click', function(){
+		qManager.currentNum++;
+		qManager.showQuestion();
+		console.log(qManager.currentNum);
+		$('.answer-area').fadeOut(500);
+		$('.play-area').delay(500).fadeIn(500);
+	})
+
 	/*---Questions---*/
 	var question1 = {
 		question: "In the 2003/04 season, which team won the Premier League?",
@@ -33,7 +42,14 @@ $(document).ready(function(){
 		answerPic: "images/arsenal.png",
 		ansDescription: "The 2003–04 FA Premier League was the twelfth season of the Premier League. In the end, Arsenal went through the season without a single defeat – the first team ever to do so in a 38 game league season and the second team overall (the first was Preston North End in 1889, 115 years earlier, during a 22 game league season) and were crowned champions once more, at the expense of Chelsea, who had spent heavily throughout the season."
 	};
-	var question2 = 0;
+	var question2 = {
+		question: "In the 2008/09 season, who won the PFA PLayer of the Year?",
+		pic: ["images/man-u.png", "images/arsenal.png", "images/chelsea.png", "images/arsenal.png"],
+		answers: ["Arsenal", "Manchester United", "Swansea City", "Chelsea"],
+		correctAnswer: "Arsenal",
+		answerPic: "images/arsenal.png",
+		ansDescription: "The 2003–04 FA Premier League was the twelfth season of the Premier League. In the end, Arsenal went through the season without a single defeat – the first team ever to do so in a 38 game league season and the second team overall (the first was Preston North End in 1889, 115 years earlier, during a 22 game league season) and were crowned champions once more, at the expense of Chelsea, who had spent heavily throughout the season."
+	};
 	var question3 = 0;
 	var question4 = 0;
 	var question5 = 0;
