@@ -21,6 +21,7 @@ $(document).ready(function(){
 	$('.submit').on('click', function(){
 		$('.play-area').fadeOut(500);
 		$('.answer-area').delay(500).fadeIn(500);
+		qManager.checkAnswer();
 	})
 
 	/*---Questions---*/
@@ -28,7 +29,9 @@ $(document).ready(function(){
 		question: "In the 2003/04 season, which team won the Premier League?",
 		pic: ["images/arsenal.png", "images/man-u.png", "images/swansea.png", "images/chelsea.png"],
 		answers: ["Arsenal", "Manchester United", "Swansea City", "Chelsea"],
-		correctAnswer: "Arsenal"
+		correctAnswer: "Arsenal",
+		answerPic: "images/arsenal.png",
+		ansDescription: "The 2003–04 FA Premier League was the twelfth season of the Premier League. In the end, Arsenal went through the season without a single defeat – the first team ever to do so in a 38 game league season and the second team overall (the first was Preston North End in 1889, 115 years earlier, during a 22 game league season) and were crowned champions once more, at the expense of Chelsea, who had spent heavily throughout the season."
 	};
 	var question2 = 0;
 	var question3 = 0;
@@ -59,6 +62,26 @@ $(document).ready(function(){
 			$('#answer2 .answer-text').text(questionAnswers[1]);
 			$('#answer3 .answer-text').text(questionAnswers[2]);
 			$('#answer4 .answer-text').text(questionAnswers[3]);
+		},
+
+		checkAnswer : function(){
+			var currentQuestion = list[this.currentNum];
+			var picture = currentQuestion.answerPic;
+			var answer = currentQuestion.correctAnswer;
+			var description = currentQuestion.ansDescription;
+
+			/*---Show correct answer content---*/	
+			$('.answer-pic').find('img').attr("src", picture);
+			$('#correct-answer').text(answer);
+			$('.description').append("<p>" + description +"</p>");
+
+			/*---Tell user if he is Correct or Incorrect---*/	
+			if ($('#answer').text() === answer) {
+				$('#correct-incorrect').text("Correct");
+			}
+			else {
+				$('#correct-incorrect').text("Incorrect");
+			}
 		}
 	}
 });
