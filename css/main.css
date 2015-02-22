@@ -10,6 +10,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 h1 {
@@ -156,15 +157,13 @@ p {
 }
 
 .list .selected {
-	padding: 0.4rem;
 	border: 0.7rem solid #F10F3F;
-	border-radius: 40px;
+	border-radius: 10px;
 }
 
 .list .unselected {
-	padding: 0.4rem;
 	border: 0.7rem solid #00235D;
-	border-radius: 40px;
+	border-radius: 10px;
 }
 
 .list .selected {
