@@ -26,13 +26,39 @@ $(document).ready(function(){
 
 	/*---CLick Next---*/
 	$('.next-question').on('click', function(){
-		qManager.currentNum++;
-		qManager.showQuestion();
-		console.log(qManager.currentNum);
-		$('.selected').removeClass('selected').addClass('unselected');
-		$('#answer').empty();
-		$('.answer-area').fadeOut(500);
-		$('.play-area').delay(500).fadeIn(500);
+
+		/*---If last question, then go to ending section---*/
+		if (qManager.currentNum == list.length-1) {
+			if (qManager.correctPoints > qManager.incorrectPoints) {
+				$('#w-l').text('Win');
+				$('#won-lost').text('won');
+			}
+			else {
+				$('#w-l').text('Lose');
+				$('#won-lost').text('lost');
+			}
+			/*---Display final score---*/
+			$('#end-correct').text(qManager.correctPoints);
+			$('#end-incorrect').text(qManager.incorrectPoints);
+			/*---FadeIn ending section---*/
+			$('.answer-area').fadeOut(500);
+			$('.ending').delay(500).fadeIn(500);
+		}
+
+		/*---If not the last question, then move on to next question---*/
+		else {
+			qManager.currentNum++;
+			qManager.showQuestion();
+			/*---Display score---*/
+			$('#correct-score').text(qManager.correctPoints);
+			$('#incorrect-score').text(qManager.incorrectPoints);
+			/*---Remove previous selected answer---*/			
+			$('.selected').removeClass('selected').addClass('unselected');
+			$('#answer').empty();
+			/*---FadeIn next question---*/
+			$('.answer-area').fadeOut(500);
+			$('.play-area').delay(500).fadeIn(500);
+		}
 	})
 
 	/*---Questions---*/
@@ -84,7 +110,9 @@ $(document).ready(function(){
 	var qManager = {
 
 		currentNum: 0,
-		
+		correctPoints: 0,
+		incorrectPoints: 0,
+
 		showQuestion : function(){
 
 			var currentQuestion = list[this.currentNum];
@@ -119,9 +147,11 @@ $(document).ready(function(){
 			/*---Tell user if he is Correct or Incorrect---*/	
 			if ($('#answer').text() === answer) {
 				$('#correct-incorrect').text("Correct");
+				qManager.correctPoints++;
 			}
 			else {
 				$('#correct-incorrect').text("Incorrect");
+				qManager.incorrectPoints++;
 			}
 		}
 	}
