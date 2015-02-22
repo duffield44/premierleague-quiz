@@ -308,6 +308,9 @@ p {
 		font-size: 0.8em;
 		margin-right: 7rem;
 	}
+	.answer-area {
+		padding: 0 1rem;
+	}
 }
 
 @media only screen and (max-width: 830px) {
@@ -318,6 +321,19 @@ p {
 		width: 30%;
 		margin-right: 4rem;
 		font-size: 0.7em;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	.answer-header {
+		text-align: center;
+	}
+	.answer-header .answer-pic,
+	.answer-header .correct {
+		float: none;
+	}
+	.answer-header .correct {
+		margin-left: 0;
 	}
 }
 
