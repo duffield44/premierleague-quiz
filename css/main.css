@@ -222,6 +222,11 @@ p {
 	float: left;
 }
 
+.answer-pic img {
+	border: 0.3rem solid #00235D;
+	border-radius: 10px;
+}
+
 .correct {
 	float: left;
 	margin: 2rem 0 0 4rem;
@@ -239,6 +244,10 @@ p {
 
 .description {
 	margin-top: 2rem;
+}
+
+.description p {
+	line-height: 1.3em;
 }
 
 .next {
